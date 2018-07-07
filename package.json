@@ -15,5 +15,9 @@
     "dotenv": "^5.0.1",
     "truffle": "4.1.6",
     "truffle-hdwallet-provider": "^0.0.3"
+  },
+  "scripts": {
+    "start": "truffle develop",
+    "test": "truffle compile && truffle test"
   }
 }

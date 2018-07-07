@@ -44,7 +44,7 @@ contract('Refund', ([owner, depositor, nonDepositor, wallet]) => {
     const pre = web3.eth.getBalance(depositor);
     const res = await refund.getRefund({ from: depositor });
     const post = web3.eth.getBalance(depositor);
-    const gasCost = getTransactionGasCost(res["tx"])
+    const gasCost = getTransactionGasCost(res["tx"]);
     post.minus(pre).plus(gasCost).should.be.bignumber.equal(value);
   })
 
